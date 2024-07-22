@@ -4,9 +4,9 @@ from leafnode import LeafNode
 class TestLeafNode(unittest.TestCase):
     def test_props_to_html(self):
         value = "Click me!"
-        tag = "a"
+        tags = "a"
         props = {"href": "https://www.google.com"}
-        testLeaf = LeafNode(tag, value, props)
+        testLeaf = LeafNode(tags, value=value, props=props)
 
         expected = "<a href=\"https://www.google.com\">Click me!</a>"
 
@@ -15,7 +15,7 @@ class TestLeafNode(unittest.TestCase):
     def test_no_tag_to_html(self):
         value = "Click me!"
         props = {"href": "https://www.google.com"}
-        testLeaf = LeafNode(tag=None, value=value, props=props)
+        testLeaf = LeafNode(value=value, props=props)
 
         self.assertEqual(value, testLeaf.to_html())
         

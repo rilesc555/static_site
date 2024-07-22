@@ -4,13 +4,13 @@ import unittest
 
 class TestParentNode(unittest.TestCase):
     def test_to_html(self):
-        node = ParentNode(tag="p",
+        node = ParentNode("p",
                           children=[
-                              LeafNode(tag="b", value="Bold text"),
-                              LeafNode(tag=None, value="Normal text"),
-                              LeafNode(tag="i", value="italic text"),
-                              LeafNode(tag=None, value="Normal text"),
-                          ],
+                              LeafNode("b", value="Bold text"),
+                              LeafNode(value="Normal text"),
+                              LeafNode("i", value="italic text"),
+                              LeafNode(value="Normal text"),
+                          ]
                           )
         
         expected = "<p><b>Bold text</b>Normal text<i>italic text</i>Normal text</p>"
