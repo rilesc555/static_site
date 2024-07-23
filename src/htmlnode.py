@@ -26,14 +26,3 @@ class HTMLNode:
         equal_tags = (set(self.tags)==set(other.tags))
         
         return equal_tags and self.value == other.value and self.children == other.children and self.props == other.props
-    
-# def main():
-#     tags = ["b", "i"]
-#     value = "This is a test html node"
-
-#     one = HTMLNode(*tags, value=value)
-#     two = HTMLNode(*tags, value=value)
-
-#     print(one == two)
-
-# main()

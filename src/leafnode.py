@@ -20,13 +20,3 @@ class LeafNode(HTMLNode):
 
     def __repr__(self):
         return f"LeafNode({self.tags}, {self.value}, {self.props})"
-
-# def main():
-#     value = "Click me!"
-#     tags = ["a", "b"]
-#     props = {"href": "https://www.google.com"}
-#     testLeaf = LeafNode(*tags, value=value, props=props)
-    
-#     print(testLeaf.to_html())
-
-# main()
