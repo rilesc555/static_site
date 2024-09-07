@@ -19,13 +19,7 @@ class TextNode:
         self.children = children
 
     def __eq__(self, other):
-        return self.text == other.text and self.text_types == other.text_types and self.url == other.url
+        return self.text == other.text and self.text_types == other.text_types and self.url == other.url and self.children == other.children
 
     def __repr__(self):
-        answer = ""
-        answer += f"TextNode(\"{self.text}\""
-        answer += f", types = [{", ".join(self.text_types)}]"
-        if self.url:
-            answer += f", url = {self.url}"
-        answer+= ")"
-        return answer
+        pass
